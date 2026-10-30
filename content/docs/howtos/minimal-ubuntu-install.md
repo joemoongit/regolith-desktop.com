@@ -48,12 +48,13 @@ wget https://archive.raspberrypi.org/debian/pool/main/g/gldriver-test/gldriver-t
 sudo apt install ./gldriver-test_0.15_all.deb
 ```
 
-On Ubuntu 22.04, 24.04, 25.04 and 25.10 you can instead add the `raspberrypi` component to the end of the Regolith repository line.  `regolith-system-ubuntu` (installed in the next step) then pulls in `gldriver-test` automatically:
+On Ubuntu 22.04, 24.04, 25.04 and 25.10 you can instead add the `raspberrypi` component to the end of the Regolith repository line, and in the next step install `regolith-system-ubuntu-raspberrypi` instead of `regolith-system-ubuntu`.  It installs `regolith-system-ubuntu` together with `gldriver-test`:
 
 ```bash
 echo deb "[arch=arm64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable questing v3.4 raspberrypi" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 sudo apt update
+sudo apt install regolith-system-ubuntu-raspberrypi
 ```
 
 ### Install the Regolith Ubuntu System
