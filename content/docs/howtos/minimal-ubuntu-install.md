@@ -48,6 +48,8 @@ wget https://archive.raspberrypi.org/debian/pool/main/g/gldriver-test/gldriver-t
 sudo apt install ./gldriver-test_0.15_all.deb
 ```
 
+Newer `regolith-system-ubuntu` packages include an Xorg config that fixes this automatically, so these steps are only needed if `/usr/share/X11/xorg.conf.d/99-regolith-vc4.conf` does not exist after installing `regolith-system-ubuntu` in the next step.
+
 ### Install the Regolith Ubuntu System
 
 There is a special package that is used in the ISO that can also be used in a minimal install such as this: `regolith-system-ubuntu`.  This package includes extra branding not used in typical desktop installs which may share multiple desktop environments.  Run the following command to install Regolith Desktop and all of it's dependencies:
