@@ -13,3 +13,5 @@ echo Regolith Desktop can be installed by executing: sudo apt install regolith-d
 # unless the gldriver-test package from Raspberry Pi is installed.  To fix it, run:
 #   wget https://archive.raspberrypi.org/debian/pool/main/g/gldriver-test/gldriver-test_0.15_all.deb
 #   sudo apt install ./gldriver-test_0.15_all.deb
+# Alternatively, add the raspberrypi component to the repository line above (...stable plucky v3.4 raspberrypi)
+# and regolith-system-ubuntu will install gldriver-test automatically.
