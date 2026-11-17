@@ -48,7 +48,7 @@ wget https://archive.raspberrypi.org/debian/pool/main/g/gldriver-test/gldriver-t
 sudo apt install ./gldriver-test_0.15_all.deb
 ```
 
-Newer `regolith-system-ubuntu` packages include an Xorg config that fixes this automatically, so these steps are only needed if `/usr/share/X11/xorg.conf.d/99-regolith-vc4.conf` does not exist after installing `regolith-system-ubuntu` in the next step.
+Newer `regolith-system-ubuntu` packages fix this automatically, so these steps are only needed if `/etc/X11/xorg.conf.d/99-regolith-raspberrypi.conf` does not exist after installing `regolith-system-ubuntu` in the next step.  At every boot, they write that file to select the display device: HDMI, or on a Raspberry Pi 5, a DSI display (ribbon cable), a DPI display or composite video when one is enabled in `/boot/firmware/config.txt`.  `gldriver-test` 0.15 does not support DSI or DPI displays on a Raspberry Pi 5 running Ubuntu.  If you installed `gldriver-test` earlier, remove it and `/etc/X11/xorg.conf.d/99-v3d.conf` once `regolith-system-ubuntu` is installed.
 
 ### Install the Regolith Ubuntu System
 
